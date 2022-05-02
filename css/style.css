@@ -75,3 +75,10 @@ h6 {
 #root,
 #__next {
   isolation: isolate; }
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #3a4764; }
