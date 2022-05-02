@@ -14,6 +14,35 @@ $breakpoint arguement choices:
 
 1em = 16px
 */
+.theme-1 {
+  --color-background-main: hsl(222, 26%, 31%);
+  --color-background-toggle-and-keypad: hsl(223, 31%, 20%);
+  --color-background-screen: hsl(224, 36%, 15%);
+  --color-key: hsl(225, 21%, 49%);
+  --color-key-shadow: hsl(224, 28%, 35%);
+  --color-key-background-and-toggle: hsl(25, 98%, 40%);
+  --color-key-shadow-dark: hsl(6, 70%, 34%);
+  --color-key-background-2: hsl(45, 7%, 89%);
+  --color-key-shadow-2: hsl(35, 11%, 61%); }
+
+.theme-2 {
+  --color-background-main: hsl(0, 0%, 90%);
+  --color-background-toggle-and-keypad: hsl(0, 5%, 81%);
+  --color-background-screen: hsl(0, 0%, 93%);
+  --color-key: hsl(185, 42%, 37%);
+  --color-key-shadow: hsl(185, 58%, 25%);
+  --color-key-background-and-toggle: hsl(6, 63%, 50%);
+  --color-key-shadow-dark: hsl(25, 99%, 27%); }
+
+.theme-3 {
+  --color-background-main: hsl(268, 75%, 9%);
+  --color-background-toggle-and-keypad: hsl(268, 71%, 12%);
+  --color-background-screen: hsl(268, 71%, 12%);
+  --color-key: hsl(281, 89%, 26%);
+  --color-key-shadow: hsl(285, 91%, 52%);
+  --color-key-background-and-toggle: hsl(176, 100%, 44%);
+  --color-key-shadow-dark: hsl(177, 92%, 70%); }
+
 body {
   font-family: "League Spartan", sans-serif;
   font-size: 2rem;
@@ -81,4 +110,10 @@ h6 {
   place-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #3a4764; }
+  background-color: var(--color-background-main); }
+
+h2 {
+  color: var(--color-background-screen); }
+
+p {
+  color: var(--color-background-toggle-and-keypad); }

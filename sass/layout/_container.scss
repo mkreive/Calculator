@@ -3,13 +3,12 @@
     place-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: $color-background-main;
+    background-color: var(--color-background-main);
 }
 
 h2 {
-    color: $color-background-screen;
+    color: var(--color-background-screen);
 }
 p {
-    color: $color-background-toggle-and-keypad;
-    font-size: $font-size-main;
+    color: var(--color-background-toggle-and-keypad);
 }
