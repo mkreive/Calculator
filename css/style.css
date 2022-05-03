@@ -24,7 +24,7 @@ $breakpoint arguement choices:
   --color-key-shadow-dark: hsl(6, 70%, 34%);
   --color-key-background-2: hsl(45, 7%, 89%);
   --color-key-shadow-2: hsl(35, 11%, 61%);
-  --font-color-main-light: hsl(60, 10%, 19%);
+  --font-color-main-light: hsl(0, 0%, 90%);
   --font-color-main-dark: hsl(60, 10%, 19%);
   --font-color-white: hsl(0, 0, 100%); }
 
@@ -59,7 +59,7 @@ body {
   font-family: "League Spartan", sans-serif;
   font-size: 2rem;
   line-height: 1.5rem;
-  font-weight: 700; }
+  font-weight: 500; }
 
 *,
 *::after,
@@ -117,7 +117,7 @@ h6 {
 #__next {
   isolation: isolate; }
 
-.wrapper {
+.container {
   display: grid;
   place-items: center;
   width: 100vw;
@@ -125,18 +125,46 @@ h6 {
   background-color: var(--color-background-main); }
 
 .calculator {
+  width: 100%;
+  background-color: red; }
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+  .header__logo {
+    color: var(--font-color-main-light);
+    font-size: 4rem; }
+  .header__theme {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline; }
+    .header__theme-header {
+      margin-right: 1.5rem;
+      text-transform: uppercase;
+      color: var(--font-color-main-light);
+      font-size: 1.5rem; }
+
+.screen {
+  width: 100%;
+  background-color: var(--color-background-screen); }
+
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 30vw;
   height: 78vh;
-  background-color: red; }
+  justify-content: space-between; }
   @media only screen and (max-width: 75em) {
-    .calculator {
+    .wrapper {
       width: 40vw; } }
   @media only screen and (max-width: 56.25em) {
-    .calculator {
+    .wrapper {
       width: 50vw; } }
   @media only screen and (max-width: 37.5em) {
-    .calculator {
+    .wrapper {
       width: 80vw;
       height: 85vh; } }
+
+.toggle {
+  flex-direction: column; }

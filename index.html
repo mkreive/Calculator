@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;500;700&display=swap"
             rel="stylesheet"
         />
 
@@ -26,7 +26,23 @@
         <main id="app-root" class="theme-1">
             <div class="container">
                 <div class="wrapper">
-                    <div class="header"></div>
+                    <div class="header">
+                        <div class="header__logo">calc</div>
+                        <div class="header__theme">
+                            <p class="header__theme-header">Theme</p>
+                            <div class="header__theme-toggle toggle">
+                                <div class="toggle__buttons">
+                                    <button>1</button>
+                                    <button>2</button>
+                                    <button>3</button>
+                                </div>
+                                <div class="toggle__bar">
+                                    <div class="toggle__bar-container"></div>
+                                    <div class="toggle__bar-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="screen"></div>
                     <div class="calculator"></div>
                 </div>

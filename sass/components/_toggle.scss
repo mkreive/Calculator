@@ -1,0 +1,14 @@
+.toggle {
+    flex-direction: column;
+
+    &__buttons {
+        border: none;
+        cursor: pointer;
+    }
+    &__bar {
+        width: 100%;
+        height: 2rem;
+        background-color: var(--color-background-toggle-and-keypad);
+        border-radius: 1rem;
+    }
+}

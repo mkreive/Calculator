@@ -1,4 +1,23 @@
 .header {
+    display: flex;
     width: 100%;
-    background-color: red;
+    justify-content: space-between;
+
+    &__logo {
+        color: var(--font-color-main-light);
+        font-size: 4rem;
+    }
+
+    &__theme {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+
+        &-header {
+            margin-right: 1.5rem;
+            text-transform: uppercase;
+            color: var(--font-color-main-light);
+            font-size: $font-size-small;
+        }
+    }
 }
