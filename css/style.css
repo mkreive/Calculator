@@ -23,7 +23,10 @@ $breakpoint arguement choices:
   --color-key-background-and-toggle: hsl(25, 98%, 40%);
   --color-key-shadow-dark: hsl(6, 70%, 34%);
   --color-key-background-2: hsl(45, 7%, 89%);
-  --color-key-shadow-2: hsl(35, 11%, 61%); }
+  --color-key-shadow-2: hsl(35, 11%, 61%);
+  --font-color-main-light: hsl(60, 10%, 19%);
+  --font-color-main-dark: hsl(60, 10%, 19%);
+  --font-color-white: hsl(0, 0, 100%); }
 
 .theme-2 {
   --color-background-main: hsl(0, 0%, 90%);
@@ -32,7 +35,11 @@ $breakpoint arguement choices:
   --color-key: hsl(185, 42%, 37%);
   --color-key-shadow: hsl(185, 58%, 25%);
   --color-key-background-and-toggle: hsl(6, 63%, 50%);
-  --color-key-shadow-dark: hsl(25, 99%, 27%); }
+  --color-key-shadow-dark: hsl(25, 99%, 27%);
+  --color-key-background-2: hsl(30, 25%, 89%);
+  --font-color-main-light: hsl(221, 14%, 31%);
+  --font-color-main-dark: hsl(221, 14%, 31%);
+  --font-color-white: hsl(0, 0, 100%); }
 
 .theme-3 {
   --color-background-main: hsl(268, 75%, 9%);
@@ -41,7 +48,12 @@ $breakpoint arguement choices:
   --color-key: hsl(281, 89%, 26%);
   --color-key-shadow: hsl(285, 91%, 52%);
   --color-key-background-and-toggle: hsl(176, 100%, 44%);
-  --color-key-shadow-dark: hsl(177, 92%, 70%); }
+  --color-key-shadow-dark: hsl(177, 92%, 70%);
+  --color-key-background-2: hsl(268, 47%, 21%);
+  --color-key-shadow-2: hsl(290, 70%, 36%);
+  --font-color-main-light: hsl(52, 100%, 62%);
+  --font-color-main-dark: hsl(198, 20%, 13%);
+  --font-color-white: hsl(0, 0, 100%); }
 
 body {
   font-family: "League Spartan", sans-serif;
@@ -105,15 +117,26 @@ h6 {
 #__next {
   isolation: isolate; }
 
-.container {
+.wrapper {
   display: grid;
   place-items: center;
   width: 100vw;
   height: 100vh;
   background-color: var(--color-background-main); }
 
-h2 {
-  color: var(--color-background-screen); }
-
-p {
-  color: var(--color-background-toggle-and-keypad); }
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 78vh;
+  background-color: red; }
+  @media only screen and (max-width: 75em) {
+    .calculator {
+      width: 40vw; } }
+  @media only screen and (max-width: 56.25em) {
+    .calculator {
+      width: 50vw; } }
+  @media only screen and (max-width: 37.5em) {
+    .calculator {
+      width: 80vw;
+      height: 85vh; } }

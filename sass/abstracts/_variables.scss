@@ -17,9 +17,9 @@ $font-weight-heavy: 700;
     --color-key-shadow-2: hsl(35, 11%, 61%);
 
     // FONT
-    $font-color-main-light: hsl(60, 10%, 19%);
-    $font-color-main-dark: hsl(60, 10%, 19%);
-    $font-color-white: hsl(0, 0, 100%);
+    --font-color-main-light: hsl(60, 10%, 19%);
+    --font-color-main-dark: hsl(60, 10%, 19%);
+    --font-color-white: hsl(0, 0, 100%);
 }
 
 .theme-2 {
@@ -32,13 +32,13 @@ $font-weight-heavy: 700;
     --color-key-shadow: hsl(185, 58%, 25%);
     --color-key-background-and-toggle: hsl(6, 63%, 50%);
     --color-key-shadow-dark: hsl(25, 99%, 27%);
-    $color-key-background-2: hsl(30, 25%, 89%);
+    --color-key-background-2: hsl(30, 25%, 89%);
     $color-key-shadow-2: hsl(28, 16%, 65%);
 
     // FONT
-    $font-color-main-light: hsl(221, 14%, 31%);
-    $font-color-main-dark: hsl(221, 14%, 31%);
-    $font-color-white: hsl(0, 0, 100%);
+    --font-color-main-light: hsl(221, 14%, 31%);
+    --font-color-main-dark: hsl(221, 14%, 31%);
+    --font-color-white: hsl(0, 0, 100%);
 }
 
 .theme-3 {
@@ -51,11 +51,11 @@ $font-weight-heavy: 700;
     --color-key-shadow: hsl(285, 91%, 52%);
     --color-key-background-and-toggle: hsl(176, 100%, 44%);
     --color-key-shadow-dark: hsl(177, 92%, 70%);
-    $color-key-background-2: hsl(268, 47%, 21%);
-    $color-key-shadow-2: hsl(290, 70%, 36%);
+    --color-key-background-2: hsl(268, 47%, 21%);
+    --color-key-shadow-2: hsl(290, 70%, 36%);
 
     // FONT
-    $font-color-main-light: hsl(52, 100%, 62%);
-    $font-color-main-dark: hsl(198, 20%, 13%);
-    $font-color-white: hsl(0, 0, 100%);
+    --font-color-main-light: hsl(52, 100%, 62%);
+    --font-color-main-dark: hsl(198, 20%, 13%);
+    --font-color-white: hsl(0, 0, 100%);
 }
