@@ -9,6 +9,7 @@
     font-size: $font-size-big;
     color: var(--font-color-numbers);
     font-weight: $font-weight-heavy;
+    cursor: pointer;
 
     &:nth-child(4) {
         background-color: var(--color-key);
