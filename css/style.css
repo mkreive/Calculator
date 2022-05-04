@@ -129,8 +129,10 @@ h6 {
   background-color: var(--color-background-main); }
 
 .calculator {
+  border-radius: 1rem;
   width: 100%;
-  background-color: red; }
+  height: 54vh;
+  background-color: var(--color-background-toggle-and-keypad); }
 
 .header {
   display: flex;
@@ -151,8 +153,18 @@ h6 {
       font-size: 1.5rem; }
 
 .screen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 1rem;
   width: 100%;
+  height: 15vh;
   background-color: var(--color-background-screen); }
+  .screen-number {
+    font-size: 6rem;
+    color: var(--font-color-main-light);
+    font-weight: 700;
+    margin-right: 3rem; }
 
 .wrapper {
   display: flex;
