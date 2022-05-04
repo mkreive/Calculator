@@ -5,7 +5,7 @@
     align-items: baseline;
 
     &__logo {
-        color: var(--font-color-main-dark);
+        color: var(--font-color-main);
         font-size: $font-size-big;
     }
 
@@ -16,7 +16,7 @@
         &-header {
             margin-right: 1.5rem;
             text-transform: uppercase;
-            color: var(--font-color-main-dark);
+            color: var(--font-color-main);
             font-size: $font-size-small;
             letter-spacing: 0.1rem;
         }

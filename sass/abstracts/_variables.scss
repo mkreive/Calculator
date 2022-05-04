@@ -24,9 +24,9 @@ $font-weight-light: 300;
     --color-key-shadow-2: hsl(35, 11%, 61%);
 
     // FONT
-    --font-color-main-light: hsl(0, 0%, 90%);
-    --font-color-main-dark: hsl(60, 10%, 19%);
-    --font-color-white: hsl(0, 0, 100%);
+    --font-color-main: hsl(0, 0%, 90%);
+    --font-color-numbers: hsl(60, 10%, 19%);
+    --font-color-reset: hsl(0, 0%, 93%);
 }
 
 .theme-2 {
@@ -43,9 +43,9 @@ $font-weight-light: 300;
     $color-key-shadow-2: hsl(28, 16%, 65%);
 
     // FONT
-    --font-color-main-light: hsl(0, 0%, 90%);
-    --font-color-main-dark: hsl(221, 14%, 31%);
-    --font-color-white: hsl(0, 0, 100%);
+    --font-color-main: hsl(221, 14%, 31%);
+    --font-color-numbers: hsl(221, 14%, 31%);
+    --font-color-reset: hsl(0, 0%, 93%);
 }
 
 .theme-3 {
@@ -62,8 +62,8 @@ $font-weight-light: 300;
     --color-key-shadow-2: hsl(290, 70%, 36%);
 
     // FONT
-    --font-color-main-light: hsl(0, 0%, 90%);
-    --font-color-main-dark: hsl(52, 100%, 62%);
-    --font-color-white: hsl(0, 0, 100%);
+    --font-color-main: hsl(52, 100%, 62%);
+    --font-color-numbers: hsl(52, 100%, 62%);
+    --font-color-reset: hsl(0, 0%, 93%);
 }
 //hsl(198, 20%, 13%)
