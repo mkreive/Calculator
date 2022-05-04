@@ -2,16 +2,15 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
 
     &__logo {
         color: var(--font-color-main-light);
-        font-size: 4rem;
+        font-size: $font-size-big;
     }
 
     &__theme {
         display: flex;
-        justify-content: flex-end;
         align-items: flex-end;
 
         &-header {
@@ -19,6 +18,7 @@
             text-transform: uppercase;
             color: var(--font-color-main-light);
             font-size: $font-size-small;
+            letter-spacing: 0.15rem;
         }
     }
 }

@@ -1,6 +1,8 @@
 // FONT
 $font-size-very-big: 6rem;
+$font-size-big: 4rem;
 $font-size-main: 2rem; // 32px
+$font-size-main-2: 2.5rem; // 32px
 $font-size-small: 1.5rem;
 
 $font-line-height: 1.5rem;
@@ -16,7 +18,7 @@ $font-weight-light: 300;
     // keys
     --color-key: hsl(225, 21%, 49%);
     --color-key-shadow: hsl(224, 28%, 35%);
-    --color-key-background-and-toggle: hsl(25, 98%, 40%);
+    --color-key-background-and-toggle: hsl(6, 63%, 48%);
     --color-key-shadow-dark: hsl(6, 70%, 34%);
     --color-key-background-2: hsl(45, 7%, 89%);
     --color-key-shadow-2: hsl(35, 11%, 61%);
