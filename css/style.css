@@ -55,6 +55,10 @@ $breakpoint arguement choices:
   --font-color-main-dark: hsl(198, 20%, 13%);
   --font-color-white: hsl(0, 0, 100%); }
 
+.switch {
+  transform: translateX(1.9rem);
+  transition: 120ms transform ease-in-out; }
+
 body {
   font-family: "League Spartan", sans-serif;
   font-size: 2rem;
@@ -131,14 +135,15 @@ h6 {
 .header {
   display: flex;
   width: 100%;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: flex-end; }
   .header__logo {
     color: var(--font-color-main-light);
     font-size: 4rem; }
   .header__theme {
     display: flex;
     justify-content: flex-end;
-    align-items: baseline; }
+    align-items: flex-end; }
     .header__theme-header {
       margin-right: 1.5rem;
       text-transform: uppercase;
@@ -167,4 +172,29 @@ h6 {
       height: 85vh; } }
 
 .toggle {
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .toggle__buttons {
+    margin: 0 0.4rem 0 0.4rem; }
+    .toggle__buttons-btn {
+      cursor: pointer;
+      border: none;
+      background-color: var(--color-background-main);
+      color: var(--font-color-main-light);
+      font-size: 1.5rem;
+      margin: 0.4rem; }
+  .toggle__bar {
+    width: 100%;
+    height: 2.2rem;
+    background-color: var(--color-background-toggle-and-keypad);
+    border-radius: 2rem;
+    padding: 0.15rem 0.15rem 0 0.15rem; }
+    .toggle__bar-circle {
+      position: relative;
+      background-color: var(--color-key-background-and-toggle);
+      width: 28%;
+      height: 80%;
+      z-index: 999;
+      border-radius: 100%;
+      margin: 0.15rem; }

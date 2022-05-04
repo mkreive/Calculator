@@ -1,14 +1,34 @@
 .toggle {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     &__buttons {
-        border: none;
-        cursor: pointer;
+        margin: 0 0.4rem 0 0.4rem;
+        &-btn {
+            cursor: pointer;
+            border: none;
+            background-color: var(--color-background-main);
+            color: var(--font-color-main-light);
+            font-size: $font-size-small;
+            margin: 0.4rem;
+        }
     }
     &__bar {
         width: 100%;
-        height: 2rem;
+        height: 2.2rem;
         background-color: var(--color-background-toggle-and-keypad);
-        border-radius: 1rem;
+        border-radius: 2rem;
+        padding: 0.15rem 0.15rem 0 0.15rem;
+
+        &-circle {
+            position: relative;
+            background-color: var(--color-key-background-and-toggle);
+            width: 28%;
+            height: 80%;
+            z-index: 999;
+            border-radius: 100%;
+            margin: 0.15rem;
+        }
     }
 }

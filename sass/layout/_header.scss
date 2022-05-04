@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: flex-end;
 
     &__logo {
         color: var(--font-color-main-light);
@@ -11,7 +12,7 @@
     &__theme {
         display: flex;
         justify-content: flex-end;
-        align-items: baseline;
+        align-items: flex-end;
 
         &-header {
             margin-right: 1.5rem;
