@@ -43,7 +43,7 @@ $font-weight-light: 300;
     $color-key-shadow-2: hsl(28, 16%, 65%);
 
     // FONT
-    --font-color-main-light: hsl(221, 14%, 31%);
+    --font-color-main-light: hsl(0, 0%, 90%);
     --font-color-main-dark: hsl(221, 14%, 31%);
     --font-color-white: hsl(0, 0, 100%);
 }
@@ -62,7 +62,8 @@ $font-weight-light: 300;
     --color-key-shadow-2: hsl(290, 70%, 36%);
 
     // FONT
-    --font-color-main-light: hsl(52, 100%, 62%);
-    --font-color-main-dark: hsl(198, 20%, 13%);
+    --font-color-main-light: hsl(0, 0%, 90%);
+    --font-color-main-dark: hsl(52, 100%, 62%);
     --font-color-white: hsl(0, 0, 100%);
 }
+//hsl(198, 20%, 13%)

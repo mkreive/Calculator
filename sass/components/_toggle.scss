@@ -9,7 +9,7 @@
             cursor: pointer;
             border: none;
             background-color: var(--color-background-main);
-            color: var(--font-color-main-light);
+            color: var(--font-color-main-dark);
             font-size: $font-size-small;
             margin: 0.4rem;
         }
@@ -19,7 +19,7 @@
         height: 2.2rem;
         background-color: var(--color-background-toggle-and-keypad);
         border-radius: 2rem;
-        padding: 0.15rem 0.15rem 0 0.15rem;
+        padding: 0.15rem 0.2rem 0 0.2rem;
 
         &-circle {
             position: relative;
