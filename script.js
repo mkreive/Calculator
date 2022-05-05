@@ -34,33 +34,48 @@ themeSwitchBtns.forEach((btn) => {
         }
     });
 });
-// const cleanUp = function () {
-//     number = "";
-//     screenValueEl.textContent = "";
-// };
 
 let numbersArray = [];
 let number;
-let prevNumber;
+let prevBtn;
 let calculation = [];
+let btnType = "";
 
 buttons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
-        let clickedBtn = e.target;
+        // check type of button
+        if (e.target.classList.contains("btn-number")) {
+            btnType = "number";
+        } else if (e.target.classList.contains("btn-actions")) {
+            btnType = "action";
+        }
 
-        if (clickedBtn.classList.contains("btn-number")) {
-            screenValueEl.textContent = "";
+        let clickedBtn = e.target.textContent;
 
-            numbersArray.push(clickedBtn.textContent);
+        // if btn is number
+        if (btnType === "number") {
+            if (isNaN(prevBtn) && prevBtn) {
+                console.log("buvo zenklas");
+            }
+            if (calculation.length > 0) {
+                console.log("kackuliaciju arejus netuscias");
+            }
+
+            numbersArray.push(clickedBtn);
             number = parseInt(numbersArray.join(""));
             screenValueEl.textContent = number;
-        } else if (clickedBtn.classList.contains("btn-actions")) {
-            prevNumber = number;
-            number = "";
+            prevBtn = clickedBtn;
 
-            screenValueEl.textContent = clickedBtn.innerText;
-            calculation.push(prevNumber + clickedBtn.innerText);
+            // if btn is an action
+        } else if (btnType === "action") {
+            calculation.push(number);
+            number = "";
             numbersArray = [];
+
+            calculation.push(clickedBtn);
+            screenValueEl.textContent = clickedBtn;
+            prevBtn = clickedBtn;
         }
+        console.log(calculation);
     });
 });
