@@ -12,24 +12,23 @@ let calculation = [];
 let numbersArray = [];
 let number;
 let prevBtn;
-let btnType = "";
 let answer;
 
 // HELPER FUNCTIONS
 
 const checkBtnType = function (e) {
     if (e.target.classList.contains("btn-number")) {
-        btnType = "number";
+        return "number";
     } else if (e.target.classList.contains("btn-actions")) {
-        btnType = "action";
+        return "action";
     } else if (e.target.classList.contains("btn-del")) {
-        btnType = "delete";
+        return "delete";
     } else if (e.target.classList.contains("btn-reset")) {
-        btnType = "reset";
+        return "reset";
     } else if (e.target.classList.contains("btn-sum")) {
-        btnType = "sum";
+        return "sum";
     } else {
-        alert("something went wrong!");
+        return "";
     }
 };
 
@@ -39,7 +38,6 @@ const clearInfo = function () {
     numbersArray = [];
     number;
     prevBtn;
-    btnType = "";
     answer;
 };
 
@@ -70,7 +68,7 @@ themeSwitchBtns.forEach((btn) => {
 // all buttons
 buttons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
-        checkBtnType(e);
+        const btnType = checkBtnType(e);
         let clickedBtn = e.target.textContent;
 
         if (btnType === "number") {
@@ -89,8 +87,7 @@ buttons.forEach((btn) => {
             }
             if (calculation.length > 2) {
                 answer = calculate(calculation);
-                calculation = [];
-                calculation.push(answer);
+                calculation = [answer];
             }
             if (btnType === "sum") {
                 screenValueEl.textContent = answer;
@@ -107,8 +104,7 @@ buttons.forEach((btn) => {
         } else if (btnType === "reset") {
             clearInfo();
         } else {
-            alert("something went wrong 💥");
+            alert("invalid button pressed");
         }
-        console.log(answer);
     });
 });
