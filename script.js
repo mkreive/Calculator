@@ -34,37 +34,33 @@ themeSwitchBtns.forEach((btn) => {
         }
     });
 });
+// const cleanUp = function () {
+//     number = "";
+//     screenValueEl.textContent = "";
+// };
 
 let numbersArray = [];
 let number;
 let prevNumber;
 let calculation = [];
 
-let prevClickedButton;
-
 buttons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
         let clickedBtn = e.target;
 
         if (clickedBtn.classList.contains("btn-number")) {
-            screenValueEl.innerText = "";
-            numbersArray.push(clickedBtn.innerText);
+            screenValueEl.textContent = "";
+
+            numbersArray.push(clickedBtn.textContent);
             number = parseInt(numbersArray.join(""));
-            screenValueEl.innerText = number;
-            prevClickedButton = "number";
-        } else if (
-            clickedBtn.classList.contains("btn-actions") &&
-            prevClickedButton
-        ) {
-            screenValueEl.innerText = clickedBtn.innerText;
-            calculation.push(number + clickedBtn.innerText);
+            screenValueEl.textContent = number;
+        } else if (clickedBtn.classList.contains("btn-actions")) {
             prevNumber = number;
             number = "";
-            prevClickedButton = "action";
+
+            screenValueEl.textContent = clickedBtn.innerText;
+            calculation.push(prevNumber + clickedBtn.innerText);
+            numbersArray = [];
         }
-        console.log("numbers array", numbersArray);
-        console.log("number", number);
-        console.log("prevNumber", prevNumber);
-        console.log("calculation", calculation);
     });
 });
