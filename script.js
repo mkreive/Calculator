@@ -1,21 +1,53 @@
 "use strict";
 
-// DATA
-
 // SELECTORS
 const app = document.getElementById("app-root");
 const themeSwitchBtns = document.querySelectorAll(".toggle__buttons-btn");
 const themeCircle = document.querySelector(".toggle__bar");
 const buttons = document.querySelectorAll(".btn");
-const btnNumber = document.querySelectorAll(".btn-number");
-const btnActions = document.querySelectorAll(".btn-actions");
 const screenValueEl = document.querySelector(".screen-number");
 
 // VARIABLES
+let calculation = [];
+let numbersArray = [];
+let number;
+let prevBtn;
+let btnType = "";
+let answer;
 
 // HELPER FUNCTIONS
 
+const checkBtnType = function (e) {
+    if (e.target.classList.contains("btn-number")) {
+        btnType = "number";
+    } else if (e.target.classList.contains("btn-actions")) {
+        btnType = "action";
+    } else if (e.target.classList.contains("btn-del")) {
+        btnType = "delete";
+    } else if (e.target.classList.contains("btn-reset")) {
+        btnType = "reset";
+    } else if (e.target.classList.contains("btn-sum")) {
+        btnType = "sum";
+    } else {
+        alert("something went wrong!");
+    }
+};
+
+const clearInfo = function () {
+    screenValueEl.textContent = "";
+    calculation = [];
+    numbersArray = [];
+    number;
+    prevBtn;
+    btnType = "";
+    answer;
+};
+
+const calculate = function (calc) {
+    return eval(calc.join(""));
+};
 // LISTENERS
+// theme switcher
 themeSwitchBtns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
         const theme = e.target.innerText;
@@ -35,47 +67,48 @@ themeSwitchBtns.forEach((btn) => {
     });
 });
 
-let numbersArray = [];
-let number;
-let prevBtn;
-let calculation = [];
-let btnType = "";
-
+// all buttons
 buttons.forEach((btn) => {
     btn.addEventListener("click", function (e) {
-        // check type of button
-        if (e.target.classList.contains("btn-number")) {
-            btnType = "number";
-        } else if (e.target.classList.contains("btn-actions")) {
-            btnType = "action";
-        }
-
+        checkBtnType(e);
         let clickedBtn = e.target.textContent;
 
-        // if btn is number
         if (btnType === "number") {
-            if (isNaN(prevBtn) && prevBtn) {
-                console.log("buvo zenklas");
-            }
-            if (calculation.length > 0) {
-                console.log("kackuliaciju arejus netuscias");
-            }
-
             numbersArray.push(clickedBtn);
-            number = parseInt(numbersArray.join(""));
+            number = numbersArray.join("");
             screenValueEl.textContent = number;
             prevBtn = clickedBtn;
-
-            // if btn is an action
-        } else if (btnType === "action") {
-            calculation.push(number);
-            number = "";
-            numbersArray = [];
+        } else if (btnType === "action" || btnType === "sum") {
+            if (number) {
+                calculation.push(number);
+                number = "";
+                numbersArray = [];
+            }
+            if (isNaN(prevBtn)) {
+                calculation.pop();
+            }
+            if (calculation.length > 2) {
+                answer = calculate(calculation);
+                calculation = [];
+                calculation.push(answer);
+            }
+            if (btnType === "sum") {
+                screenValueEl.textContent = answer;
+                return;
+            }
 
             calculation.push(clickedBtn);
             screenValueEl.textContent = clickedBtn;
             prevBtn = clickedBtn;
+        } else if (btnType === "delete") {
+            numbersArray.pop();
+            number = numbersArray.join("");
+            screenValueEl.textContent = number;
+        } else if (btnType === "reset") {
+            clearInfo();
+        } else {
+            alert("something went wrong 💥");
         }
-        console.log(calculation);
+        console.log(answer);
     });
 });
