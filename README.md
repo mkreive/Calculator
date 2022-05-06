@@ -9,6 +9,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
     -   [Links](#links)
 -   [My process](#my-process)
     -   [Built with](#built-with)
+    -   [screenshot](#screenshot)
 -   [Author](#author)
 
 ## Overview
@@ -24,7 +25,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
+-   Solution URL: (https://calculator-pied-five.vercel.app/)
 -   Live Site URL: (https://github.com/mkreive/Calculator)
 
 ## My process
@@ -35,6 +36,10 @@ Users should be able to:
 -   CSS custom properties
 -   Flexbox
 -   CSS Grid
+
+### Screenshot
+
+-   Screenshot URL: (https://res.cloudinary.com/kreiva/image/upload/v1651816974/FrontendMentor/Calculator/screenshot_aispym.png)
 
 ## Author
 
